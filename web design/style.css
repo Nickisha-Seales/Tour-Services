@@ -1,0 +1,273 @@
+
+
+/* Header and Navigation */
+ header{
+	font-family: 'MV Boli', sans-serif;
+	 margin: 3;
+    padding: 0;
+    background-color: #f0f8ff;
+    background-color: #006d77;
+    color: white;
+    padding: 4px;
+text-align: center;}
+
+
+nav ul {
+	
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-size: 20px;
+    font-family: 'Helvetica Neue (Headings)', Footlight MT Light;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #00acc1;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    top: 100%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #b2ebf2;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Section: Content */
+#content {
+    text-align: center;
+    padding: 50px;
+}
+
+#content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#content p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+
+/* Section: Explore */
+#explore {
+    padding: 50px;
+    background-color: #edf6f9;
+    text-align: center;
+}
+
+.islands-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.island-card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    margin:0%;
+    text-align: center;
+    padding: 50px;
+}
+
+.island-card img {
+	position:justify;
+    width: 150%;
+    height: 100%;
+    border-radius:20px;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .islands-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slider {
+        width: 100%;
+    }
+}
+/* General styling */
+body {
+  font-family: 'Bell MT', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Grid layout for 2x2 image cards */
+.image-hover {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Individual container */
+.container {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 300px; 
+}
+
+.container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hover content box */
+.container .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+
+.container:hover .content {
+  opacity: 1;
+}
+
+.content h1 {
+  margin-top: 0;
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.content p {
+  margin: 10px 0 0;
+}
+
+.windward-banner {
+  background: linear-gradient(to right, #A2FF00, #008080); 
+  padding: 40px 0px;
+  text-align: center;
+  color: #fffbf0; /* light warm cream text */
+  font-family: 'Playfair Display', Freestyle Script;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.windward-banner h2 {
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* subtle shadow for contrast */
+}
+/* Booking Button Style */
+.btn {
+  display: inline-block;
+  background-color: #006d77; 
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 109, 119, 0.3);
+  transition: all 0.3s ease;
+  font-weight: bold;
+  position: Center;
+}
+
+.btn:hover {
+  background-color: #00b4d8; 
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 180, 216, 0.4);
+}
+.button-container {
+  text-align: center;
+  margin: 40px 0;
+}
+/* Footer */
+footer {
+    background-color: #006d77;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+

@@ -1,0 +1,66 @@
+/* 1. Outer wrapper: fixed dimensions, centered, overflow hidden */
+#carousel {
+  width: 80%;
+  max-width: 1000px;      /* optional cap */
+  height: 600px;
+  margin: 100px auto;      /* vertical spacing + horizontal centering */
+  position: relative;
+  overflow: hidden;
+}
+
+/* 2. Inner container (for padding or background) */
+#carousel-container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  background: #fff;
+}
+
+/* 3. The image itself: fill & crop */
+#carousel-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* fill the box, cropping as needed */
+  object-position: center;  /* center the crop */
+}
+
+/* 4. Button panel overlay */
+#carousel-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+#button-container button {
+  display: inline-block;
+  background-color: #5dade2; 
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 109, 119, 0.3);
+  transition: all 0.3s ease;
+  font-weight: bold;
+  position: Center;
+}
+
+#button-container button:hover {
+  background-color: #58d68d;
+}
+
+/* 5. Responsive  */
+@media screen and (max-width: 600px) {
+  #carousel {
+    height: 300px;
+  }
+  #button-container button {
+    width: 80px;
+    font-size: 16px;
+    margin: 0 5px;
+  }
+}
